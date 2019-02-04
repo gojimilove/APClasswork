@@ -10,8 +10,10 @@ public class Classwork {
 
   private static void wordsH(List<String> words, int k, int m, String word) {
     if (m == 0) {
-      System.out.println(word);
-      words.add(word);
+      if (word.length() == k) {
+        words.add(word);
+        //System.out.println(word);
+      }
     }
     else {
       wordsH(words, k, m-1, word);
@@ -19,7 +21,22 @@ public class Classwork {
     }
   }
 
+  public static String printList(List<String> x) {
+        String s = "[";
+        for (int i = 0; i < x.size(); i++) {
+            s+= x.get(i);
+            if (i < x.size()-1) {
+                s+=", ";
+            }
+        }
+        s+="]";
+        return s;
+    }
+
   public static void main(String[] args) {
-    makeAllWords(1, 3);
+    System.out.println(printList(makeAllWords(1, 26)));
+    System.out.println(printList(makeAllWords(2, 26)));
+    System.out.println(printList(makeAllWords(3, 3)));
+    //System.out.println(printList(makeAllWords(4, 2)));
   }
 }
