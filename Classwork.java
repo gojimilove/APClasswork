@@ -8,19 +8,6 @@ public class Classwork {
     return words;
   }
 
-  // private static void wordsH(List<String> words, int k, int m, String word) {
-  //   if (m == 0) {
-  //     if (word.length() == k) {
-  //       words.add(word);
-  //       //System.out.println(word);
-  //     }
-  //   }
-  //   else {
-  //     wordsH(words, k, m-1, word);
-  //     wordsH(words, k, m-1, word+((char)('a'-1+m)));
-  //   }
-  // }
-
   private static void wordsH(List<String> words, int k, int m, String word) {
   	if (k == 0) {
   		words.add(word);
@@ -46,9 +33,9 @@ public class Classwork {
     }
 
   public static void main(String[] args) {
-    System.out.println(printList(makeAllWords(4, 2)));
-    //System.out.println(printList(makeAllWords(2, 26)));
-    //System.out.println(printList(makeAllWords(3, 3)));
-    //System.out.println(printList(makeAllWords(4, 2)));
+    System.out.println(printList(makeAllWords(1,26)));
+    System.out.println(printList(makeAllWords(2,26)));
+    System.out.println(printList(makeAllWords(3,3)));
+    System.out.println(printList(makeAllWords(4,2)));
   }
 }
